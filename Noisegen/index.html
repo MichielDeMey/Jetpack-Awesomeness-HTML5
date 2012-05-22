@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script type="text/javascript" src="./js/jquery.js"></script>
+        <script type="text/javascript" src="./js/noisegen-0.1.3.min.js"></script>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Test</title>
+    </head>
+    <body>
+        <script>
+            
+          $("body").noiseGen({
+             	opacity: 1,
+              	width: 1280,
+              	height: 1024,
+            	grainDimension: 5,
+            	bias: 14,
+              	distribution: 3,
+              	fromColor: "000000",
+            	toColor: "f0f0f0",
+              	independentChannels: false
+            });
+            
+
+        </script>
+    </body>
+</html>

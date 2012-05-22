@@ -1,14 +1,52 @@
-<!--
-To change this template, choose Tools | Templates
-and open the template in the editor.
--->
 <!DOCTYPE html>
 <html>
     <head>
-        <title></title>
+        <title>Jetpack Awesomeness HTML5</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+        <link rel="stylesheet" type="text/css" href="css/game.css" />
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+
+        <!--<script type="text/javascript" src="lib/xrtml-1.5.js" ></script>-->
+        <script type="text/javascript" src="lib/jquery.js" ></script>
+        <script type="text/javascript" src="lib/noisegen-0.1.3.min.js" ></script>
+        <script type="text/javascript" src="lib/bootstrap.min.js" ></script>
+        <script type="text/javascript" src="lib/soundmanager2-nodebug-jsmin.js" ></script>
+        <script>
+            soundManager.url = './sm/swf/';
+        </script>
+        <script type="text/javascript" src="lib/crafty.js"></script>
+        <!--<script type="text/javascript" src="js/network.js"></script>-->
+        <script type="text/javascript" src="lib/Box2dWeb-2.1.a.3.js"></script>
+        <script type="text/javascript" src="js/scenes.js"></script>
+        <script type="text/javascript" src="js/gui.js"></script>
+        <script type="text/javascript" src="js/CollisionFilter.js"></script>
+        <script type="text/javascript" src="js/coin_structures.js"></script>
+        <script type="text/javascript" src="js/components.js"></script>
+        <script type="text/javascript" src="js/jetpack_main.js"></script>
     </head>
-    <body>
-        <div>TODO write content</div>
-    </body>
+    <body style="margin:0; padding:0; background-color: #000;">
+
+    <!--<xrtml:config debug="false">
+        <xrtml:connections>
+            <xrtml:connection appKey="OL8JGg" authToken="44ea2b877cf34b10b4b6e7f0e83c7db2"
+                              authenticate="false" url="http://developers2.realtime.livehtml.net/server/2.0/" onSubscribed="onSubscribed" onConnected="onConnected">
+                <xrtml:channels>
+                    <xrtml:channel name="myChannel" permission="write"/>
+                </xrtml:channels>
+            </xrtml:connection>
+        </xrtml:connections>
+    </xrtml:config>
+
+    <xrtml:broadcast channelId="myChannel" receiveOwnMessages="true">
+        <xrtml:triggers>
+            <xrtml:trigger name="broadcastChangesTrigger"></xrtml:trigger>
+        </xrtml:triggers>
+        
+        <xrtml:dispatchers>
+            <xrtml:dispatcher callback="sendMessage"></xrtml:dispatcher>
+        </xrtml:dispatchers>
+    </xrtml:broadcast>-->
+
+</body>
 </html>

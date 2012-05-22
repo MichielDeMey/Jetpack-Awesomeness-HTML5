@@ -1,0 +1,62 @@
+@font-face {
+    font-family: 'Pic0Regular';
+    src: url('../assets/fonts/pic0-webfont.eot');
+    src: url('../assets/fonts/pic0-webfont.eot?#iefix') format('embedded-opentype'),
+        url('../assets/fonts/pic0-webfont.woff') format('woff'),
+        url('../assets/fonts/pic0-webfont.ttf') format('truetype'),
+        url('../assets/fonts/pic0-webfont.svg#Pic0Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.menu{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.menu > div{
+    /*width: 400px;
+    height: 260px;*/
+    overflow: hidden;
+    position: relative;
+}
+
+.menu > div + div{
+    background-color: #000;
+    position: absolute;
+    top: 10%;
+    height: 80%;
+    width: 100%;
+}
+
+.menu > div > div{
+    height: 500px;
+    width: 800px;
+    background-image: url(../assets/images/stripe_grey.png);
+    background-color: #000;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    /*-moz-transition:  opacity 0.5s ease-out; 
+    -o-transition: opacity 0.5s ease-out; 
+    -webkit-transition: opacity 0.5s ease-out; 
+    -ms-transition: opacity 0.5s ease-out; */
+
+    -webkit-animation: moveBG 10s linear infinite;
+    -moz-animation:    moveBG 10s linear infinite;
+    
+    -webkit-transform: translate3d(0, 0, 0);
+    
+    -ms-transform: translateX(0);
+}
+
+@-webkit-keyframes moveBG {
+    0% { -webkit-transform: translateX(0); }
+    100% { -webkit-transform: translateX(-399px); }
+}
+@-moz-keyframes moveBG {
+    0% { -moz-transform:    translateX(0); }
+    100% { -moz-transform:    translateX(-399px); }
+}
