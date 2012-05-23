@@ -195,8 +195,8 @@ function loadGameAudio()
             url: './assets/audio/music/Unreeeal_Superhero_3_Revamp.mp3'
         });
         
-        if(SoundManager.enabled) music_game.play();
-        console.log("loadMusic()>>> Playing some music!");
+        music_game.play();
+        console.log("loadMusic()>>> Playing some background music!");
         
         fx_explosion = soundManager.createSound({
             id:  'fx_explosion',
@@ -206,7 +206,7 @@ function loadGameAudio()
         console.log("loadSound()>>> All audio loaded!");
         
     });
-      
+     
 }
 
 /*
