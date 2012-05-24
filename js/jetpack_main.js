@@ -135,7 +135,7 @@ function loadGame()
     "text-align": "center", 
     "color": "#ffffff"
   });
-  $('body').prepend('<div id="progressbar" class="progress progress-info progress-striped active"> <div class="bar" style="width: 0%;"></div></div>');
+  //$('body').prepend('<div id="progressbar" class="progress progress-info progress-striped active"> <div class="bar" style="width: 0%;"></div></div>');
     
   //Preload Crafty assets
   /*Crafty.load([
@@ -157,9 +157,10 @@ function loadGame()
     "assets/sprites/blob.png",
     "assets/sprites/rocket.png",
     "assets/sprites/coin.png",
-    "assets/audio/music/Unreeeal_Superhero_3_Revamp.mp3",
-    "assets/audio/fx/explosion.wav",
-    "assets/audio/fx/coin2.wav"
+    //"assets/audio/music/Unreeeal_Superhero_3_Revamp.mp3",
+    //"assets/audio/fx/explosion.wav",
+    //"assets/audio/fx/coin2.wav",
+    //"assets/audio/fx/powerup.wav"
     ], function() {
         
       createSprites();
@@ -168,19 +169,19 @@ function loadGame()
       Crafty.scene("menu_main");
     },
     function(e) {
-      $('.bar').css("width",e.percent + "%");
+      //$('.bar').css("width",e.percent + "%");
       console.log(e);
       console.log("Loaded:" + e.percent);
             
       if(e.loaded > 0) loadingtext.text("Loading images <br /> " + e.percent + "%");
       if(e.loaded >= 2) loadingtext.text("Loading sprites <br /> " + e.percent + "%");
-      //if(e.loaded >= 6) loadingtext.text("Loading siund effects <br /> " + e.percent + "%");
+      //if(e.loaded >= 6) loadingtext.text("Loading sound effects <br /> " + e.percent + "%");
       //if(e.loaded >= 8) loadingtext.text("Loading sound effects <br /> " + e.percent + "%");
         
-      if(e.percent == 100)
+      /*if(e.percent == 100)
       {
         $('#progressbar').detach();
-      }
+      }*/
     },
     function(e){
       console.log("Error loading the game: ");
@@ -193,12 +194,18 @@ function loadGame()
  */
 function loadGameAudio()
 {
-  //soundManager.onready(function() {
-        
   music_game = soundManager.createSound({
     id:  'music_game',
     url: './assets/audio/music/Unreeeal_Superhero_3_Revamp.mp3'
   });
+  
+  var powerup_sound = soundManager.createSound({
+    id: 'powerup_sound',
+    url: './assets/audio/fx/powerup.wav'
+  });
+  
+  powerup_sound.play();
+  console.log("loadMusic()>>> Playing the powerup sound");
         
   music_game.play();
   console.log("loadMusic()>>> Playing some background music!");
@@ -208,10 +215,7 @@ function loadGameAudio()
     url: './assets/audio/fx/explosion.wav'
   });
         
-  console.log("loadSound()>>> All audio loaded!");
-        
-//});
-     
+  console.log("loadSound()>>> All audio loaded!");   
 }
 
 /*
